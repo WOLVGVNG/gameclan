@@ -1,0 +1,58 @@
+@extends('layout.app')
+@section('content')
+<div class='container text-center'>
+    <h1 class='jumbotron'>Admin panel</h1>
+    @foreach($users as $user)
+    <table class='table'>
+        <tr>
+            <th>id</th>
+            <th>active</th>
+            <th>banned</th>
+            <th>notifiable_email</th>
+            <th>user_name</th>
+            <th>email</th>
+            <th>email_verified_at</th>
+            <th>password</th>
+            <th>remember_token</th>
+            <th>avatar</th>
+            <th>points</th>
+            <th>steam_id</th>
+            <th>facebook_id</th>
+            <th>google_id</th>
+            <th>geo</th>
+            <th>lang</th>
+            <th>ref</th>
+            <th>ref_status</th>
+            <th>ref_code</th>
+            <th>delted_at</th>
+            <th>created_at</th>
+            <th>updated_at</th>
+        </tr>
+        <tr>
+            <td>{{id}}<td>
+            <td>{{active}}<td>
+            <td>{{banned}}<td>
+            <td>{{notifiable_email}}<td>
+            <td>{{user_name}}<td>
+            <td>{{email}}<td>
+            <td>{{email_verified_at}}<td>
+            <td>{{password}}<td>
+            <td>{{remember_token}}<td>
+            <td>{{avatar}}<td>
+            <td>{{points}}<td>
+            <td>{{steam_id}}<td>
+            <td>{{facebook_id}}<td>
+            <td>{{google_id}}<td>
+            <td>{{geo}}<td>
+            <td>{{lang}}<td>
+            <td>{{ref}}<td>
+            <td>{{ref_status}}<td>
+            <td>{{ref_code}}<td>
+            <td>{{delted_at}}<td>
+            <td>{{created_at}}<td>
+            <td>{{updated_at}}<td>
+        </tr>
+    </table>
+    @endforeach
+</div>
+@endsection
