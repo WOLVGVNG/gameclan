@@ -10,11 +10,11 @@
 
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url('images/minigame-bg.jpg');
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                padding-bottom: 50px;
+                padding: 35px 0 35px 0;
             }
 
             .user-part-div {
@@ -23,6 +23,10 @@
 
             #filter-div {
                 border-right: 3px solid gray;
+            }
+
+            .container {
+                background-color: white;
             }
         </style>
     </head>
