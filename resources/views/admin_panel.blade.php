@@ -169,7 +169,6 @@
                             <option value='id' @if(session('sort_type') == 'id') echo selected @endif>Id</option>
                             <option value='user_name' @if(session('sort_type') == 'user_name') echo selected @endif>User name</option>
                             <option value='email' @if(session('sort_type') == 'email') echo selected @endif>E-mail</option>
-                            <option value='notifiable_email' @if(session('sort_type') == 'notifiable_email') echo selected @endif>Notifiable email</option>
                             <option value='email_verified_at' @if(session('sort_type') == 'email_verified_at') echo selected @endif>Email verification date</option>
                             <option value='points' @if(session('sort_type') == 'points') echo selected @endif>Points</option>
                             <option value='steam_id' @if(session('sort_type') == 'steam_id') echo selected @endif>Steam id</option>
@@ -179,7 +178,6 @@
                             <option value='lang' @if(session('sort_type') == 'lang') echo selected @endif>Language</option>
                             <option value='ref' @if(session('sort_type') == 'ref') echo selected @endif>Ref</option>
                             <option value='ref_status' @if(session('sort_type') == 'ref_status') echo selected @endif>Ref status</option>
-                            <option value='ref_code' @if(session('sort_type') == 'ref_code') echo selected @endif>Ref code</option>
                             <option value='deleted_at' @if(session('sort_type') == 'deleted_at') echo selected @endif>The date of removal</option>
                             <option value='created_at' @if(session('sort_type') == 'created_at') echo selected @endif>Creation date</option>
                             <option value='updated_at' @if(session('sort_type') == 'updated_at') echo selected @endif>Update date</option>
@@ -215,22 +213,21 @@
                         <p class='font-weight-bold'>email</p>
                         <p>{{$user->email}}</p>
                     </div>
+                    @if($user->active)
+                        <div class='user-part-div col d-flex align-items-center'>
+                            <p class='font-weight-bold'>Active</p>
+                        </div>
+                    @else
+                        <div class='user-part-div col d-flex align-items-center'>
+                            <p class='font-weight-bold'>Banned</p>
+                        </div>
+                    @endif
                     @if(isset($user->email_verified_at))
                         <div class='user-part-div col'>
                             <p class='font-weight-bold'>email_verified_at</p>
                             <p>{{$user->email_verified_at}}</p>
                         </div>
                     @endif
-                    @if(isset($user->email_verified_at))
-                        <div class='user-part-div col'>
-                            <p class='font-weight-bold'>remember_token</p>
-                            <p>{{$user->remember_token}}</p>
-                        </div>
-                    @endif
-                    <div class='user-part-div col'>
-                        <p class='font-weight-bold'>avatar</p>
-                        <p>{{$user->avatar}}</p>
-                    </div>
                     <div class='user-part-div col'>
                         <p class='font-weight-bold'>points</p>
                         <p>{{$user->points}}</p>
@@ -273,10 +270,6 @@
                             <p>{{$user->ref_status}}</p>
                         </div>
                     @endif
-                    <div class='user-part-div col'>
-                        <p class='font-weight-bold'>ref_code</p>
-                        <p>{{$user->ref_code}}</p>
-                    </div>
                     @if(isset($user->deleted_at))
                         <div class='user-part-div col'>
                             <p class='font-weight-bold'>deleted_at</p>
