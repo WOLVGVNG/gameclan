@@ -27,6 +27,7 @@
 
             .container {
                 background-color: white;
+                border-radius:10px;
             }
         </style>
     </head>

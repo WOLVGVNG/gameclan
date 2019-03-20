@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
-<div class='container text-center'>
+<div class='container text-center pt-3'>
     <h1 class='jumbotron'>Admin panel</h1>
     <form action='/' method='GET'>
         <div class='row'>
