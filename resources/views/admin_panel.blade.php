@@ -155,7 +155,7 @@
 
                 <hr>
 
-                <div class='row'>
+                <div class='row mb-5'>
                     <button type='submit' class='btn btn-primary mt-3 mx-auto'>Filter</button>
                 </div>
             </div>
