@@ -33,7 +33,7 @@ class AdminPanelController extends Controller
         session::put('filter_points_switch', $request->filter_points_switch ?: false);
         if ($request->filter_points!=null) {
             session::put('filter_points', intval($request->filter_points));
-        }
+        } else (session::put('filter_points', 0));
 
         session::put('filter_connected_accounts_switch', $request->filter_connected_accounts_switch ?: false);
         session::put('filter_connected_accounts_steam', $request->filter_connected_accounts_steam ? 'steam' : null);

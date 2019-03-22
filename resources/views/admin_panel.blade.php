@@ -22,7 +22,7 @@
                         <label for='active'>User is active</label>
                     </div>
                     <div class='col'>
-                        <input type='radio' name='filter_active' id='banned' value='banned' @if(session('filter_active  ')=='banned') echo checked @endif>
+                        <input type='radio' name='filter_active' id='banned' value='banned' @if(session('filter_active')=='banned') echo checked @endif>
                         <label for='banned'>User is banned</label>
                     </div>
                 </div>
